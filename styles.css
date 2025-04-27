@@ -1,0 +1,25 @@
+/* Body and basic page styling */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+header { background-color: #2e86de; color: white; padding: 20px; text-align: center; }
+nav { background: #1e5faf; padding: 10px; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; }
+footer { text-align: center; padding: 10px; background: #ddd; margin-top: 20px; }
+
+/* Container and form styling */
+.container { padding: 20px; }
+form { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: 0 auto; }
+input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+button { background: #2e86de; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #1e5faf; }
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section { animation: fadeIn 1.5s ease-in-out; }
+
+/* Payment page styling */
+.payment-container { max-width: 500px; margin: 0 auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+.payment-container h1 { color: #2e86de; }

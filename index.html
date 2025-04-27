@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkwa LLC - Moving & Delivery Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Arkwa LLC</h1>
+    <p>Smart Moves, Smarter Costs</p>
+</header>
+
+<nav>
+    <a href="#service.html">Services</a>
+    <a href="booking.html">Book Now</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Local Residential Moves</li>
+            <li>Small Business Deliveries</li>
+            <li>Furniture and Appliance Transport</li>
+            <li>Event Setup Logistics</li>
+            <li>Junk Removal and Recycling Transport</li>
+        </ul>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book">
+        <h2>Book Your Move</h2>
+        <form action="https://formsubmit.co/rappia27@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thank-you.html">
+            
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service">
+                <option value="small-move">Small Move</option>
+                <option value="medium-move">Medium Move</option>
+                <option value="large-move">Large Move</option>
+                <option value="junk-removal">Junk Removal</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="from-address">From (Pickup Location)</label>
+            <input type="text" id="from-address" name="from-address" placeholder="Enter Pickup Address" required>
+
+            <label for="to-address">To (Drop-off Location)</label>
+            <input type="text" id="to-address" name="to-address" placeholder="Enter Drop-off Address" required>
+
+            <label for="details">Additional Details</label>
+            <textarea id="details" name="details" rows="4" placeholder="Tell us about your move..."></textarea>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: rappia27@gmail.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Arkwa LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

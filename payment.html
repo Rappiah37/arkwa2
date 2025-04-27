@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkwa LLC - Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Arkwa LLC - Secure Payment</h1>
+</header>
+
+<div class="payment-container">
+    <h2>Secure Payment</h2>
+    <form action="https://paymentgateway.com/submit" method="POST">
+        <label for="service">Select Service</label>
+        <select id="service" name="service" disabled>
+            <option value="small-move">Small Move</option>
+            <option value="medium-move">Medium Move</option>
+            <option value="large-move">Large Move</option>
+            <option value="junk-removal">Junk Removal</option>
+        </select>
+
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" name="amount" value="100" readonly>
+
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment-method">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+    var stripe = Stripe('your-publishable-key-here');
+    var checkoutButton = document.getElementById('checkout-button');
+
+    checkoutButton.addEventListener('click', function () {
+        stripe.redirectToCheckout({
+            lineItems: [{price: 'price_id_here', quantity: 1}],
+            mode: 'payment',
+            successUrl: 'https://arkwa.info/success.html',
+            cancelUrl: 'https://arkwa.info/cancel.html',
+        })
+        .then(function (result) {
+            if (result.error) {
+                alert(result.error.message);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
